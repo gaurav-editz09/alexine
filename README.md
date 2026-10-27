@@ -2,7 +2,7 @@
 
 A premium, single-page restaurant website for a **fictional** modern Bihari live-fire restaurant in Purnea, Bihar. Built as a presentation piece for restaurant owners: dark editorial art direction, real photography, restrained motion, a genuine Three.js ember field and a working set of front-end interactions. The menu is built around litti chokha, sattu, mustard oil and Champaran mutton — no beef.
 
-> **Demo content.** Ember &amp; Spice is not a real restaurant. The address, phone number, email, WhatsApp number, opening hours, chef, menu and prices are placeholders. The reservation button opens an explanatory panel and does **not** create a booking. The page is marked `noindex, nofollow`; remove that meta tag before any real launch.
+> **Demo content.** Ember &amp; Spice is not a real restaurant. The address, phone number, email, WhatsApp number, opening hours, chef, menu and prices are placeholders. The reservation button opens an explanatory panel and does **not** create a booking. The concept demo is eligible for search indexing, but Google decides whether and when to show it.
 
 ## Run it locally
 
@@ -34,7 +34,9 @@ The repository includes a GitHub Actions workflow at `.github/workflows/pages.ym
 2. Push to the `main` or `master` branch, or run **Deploy static website to GitHub Pages** from the **Actions** tab.
 3. When the workflow succeeds, GitHub shows the live address under **Settings → Pages**. Project sites are usually available at `https://<username>.github.io/<repository>/`.
 
-The workflow publishes only `index.html`, `favicon.svg` and `assets/`; the working folders and source notes are not included in the live site. The page remains labelled as a fictional concept demo and is marked `noindex`.
+The workflow publishes only `index.html`, `favicon.svg`, `sitemap.xml` and `assets/`; the working folders and source notes are not included in the live site. The page and structured data identify it as a fictional concept demo, not a real restaurant.
+
+After deployment, add the URL-prefix property `https://gaurav-editz09.github.io/alexine/` in Google Search Console, then submit `https://gaurav-editz09.github.io/alexine/sitemap.xml` under **Sitemaps**. Use **URL Inspection** on the homepage and select **Request indexing**. Google indexing and search appearance are not guaranteed and may take time.
 
 ## What is included
 
@@ -68,7 +70,7 @@ The workflow publishes only `index.html`, `favicon.svg` and `assets/`; the worki
 └─ _candidates*/                  # image-selection contact sheets (disposable)
 ```
 
-The `_parts`, `_final` and `_candidates` folders are working files, not part of the deployed site. Only `index.html`, `favicon.svg` and `assets/` need to be uploaded.
+The `_parts`, `_final` and `_candidates` folders are working files, not part of the deployed site. Only `index.html`, `favicon.svg`, `sitemap.xml` and `assets/` need to be uploaded.
 
 ## Design and technical notes
 
@@ -86,7 +88,7 @@ The `_parts`, `_final` and `_candidates` folders are working files, not part of 
 1. Replace every placeholder business detail: address, phone, email, WhatsApp, Instagram, opening hours, chef and menu.
 2. Connect the reserve buttons to a real booking provider (SevenRooms, OpenTable, Dineout) or an email enquiry form with server-side validation.
 3. Replace the demo reservation panel copy and remove the demo bar, chips and notes.
-4. Remove `<meta name="robots" content="noindex, nofollow">` and update the canonical URL, Open Graph URL and JSON-LD to the live domain.
+4. Update the canonical URL, Open Graph URL, sitemap and JSON-LD to the live domain and verified business details.
 5. Replace the stock and Wikimedia Commons photography with the restaurant's own shoot. If any Commons image is kept, retain the author and licence attribution shown below (CC BY / CC BY-SA require it).
 6. Run a fresh Lighthouse audit against the production host and test on real iOS/Android devices.
 
