@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ember and Spice">
+  <rect width="64" height="64" rx="13" fill="#0B0A09"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="12.25" fill="none" stroke="#C98A56" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M32 9c2 8 10 12 10 22 0 7.2-4.5 12-10 12s-10-4.8-10-12c0-7 5-10 6-17 1.5 2 2.5 4 3 6 .6-3.5 1-7 1-11Z" fill="#C98A56"/>
+  <path d="M32 27c1.8 3.4 4.4 5 4.4 8.2 0 3-2 4.8-4.4 4.8s-4.4-1.8-4.4-4.8c0-2.8 3-4.6 4.4-8.2Z" fill="#F3EADB"/>
+</svg>

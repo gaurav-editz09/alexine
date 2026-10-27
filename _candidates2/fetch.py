@@ -1,0 +1,68 @@
+﻿import urllib.request, os, concurrent.futures
+ids = """1543352634-a1c51d9f1fa7
+1519708227418-c8fd9a32b7a2
+1502301103665-0b95cc738daf
+1515669097368-22e68427d265
+1535140728325-a4d3707eee61
+1598515214211-89d3c73ae83b
+1546039907-7fa05f864c02
+1563379926898-05f4575a45d8
+1556909212-d5b604d0c90d
+1476718406336-bb5a9690ee2a
+1508424757105-b6d5ad9329d0
+1466978913421-dad2ebd01d17
+1537047902294-62a40c20a6ae
+1606787366850-de6330128bfc
+1604909052743-94e838986d24
+1615937722923-67f6deaf2cc9
+1603894584373-5ac82b2ae398
+1565557623262-b51c2513a641
+1505253716362-afaea1d3d1af
+1485921325833-c519f76c4927
+1529042410759-befb1204b468
+1558030117-47949a49b7e6
+1533777857889-4be7c70b33f7
+1541544741938-0af808871cc0
+1569718212165-3a8278d5f624
+1591814468924-caf88d1232e1
+1495521821757-a1efb6729352
+1506354666786-959d6d497f1a
+1574484284002-952d92456975
+1589641518843-6d87d8c6a3f3
+1541557435984-1c79685a082b
+1516684732162-798a0062be99
+1590846406792-0adc7f938f1d
+1560624052-449f5ddf0c31
+1572116469696-31de0f17cc34
+1543007630-9710e4a00a20
+1517457373958-b7bdd4587205
+1574096079513-d8259312b785
+1565299507177-b0ac66763828
+1569058242253-92a9c755a0ec
+1509440159596-0249088772ff
+1551183053-bf91a1d81141
+1559314809-0d155014e29e
+1568600891621-50f697b9a1c7
+1600335895229-6e75511892c8
+1528712306091-ed0763094c98
+1595854341625-f33ee10dbf94
+1604152135912-04a022e23696
+1559847844-5315695dadae""".split()
+os.makedirs('_candidates2', exist_ok=True)
+def get(args):
+    i, pid = args
+    path = f'_candidates2/{i:02d}.jpg'
+    if os.path.exists(path) and os.path.getsize(path) > 2000: return i, 'cached'
+    url = f'https://images.unsplash.com/photo-{pid}?w=420&h=420&fit=crop&q=65&fm=jpg'
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent':'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=30) as r, open(path,'wb') as f:
+            f.write(r.read())
+        return i, 'ok'
+    except Exception as e:
+        return i, 'ERR'
+with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+    res = list(ex.map(get, list(enumerate(ids,1))))
+print('ok', sum(1 for i,s in res if s=='ok'), 'fail', [i for i,s in res if s!='ok'])
+with open('_candidates2/ids.txt','w') as f:
+    for i,pid in enumerate(ids,1): f.write(f'{i:02d} photo-{pid}\n')

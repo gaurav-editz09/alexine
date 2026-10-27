@@ -1,0 +1,653 @@
+{
+  "desktop": {
+    "metrics": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 10179,
+      "overflowX": false,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "marquee__track",
+          "left": -73,
+          "right": 1499,
+          "w": 1572
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": -73,
+          "right": 713,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": -73,
+          "right": -7,
+          "w": 66
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": 713,
+          "right": 1499,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1462,
+          "right": 1465,
+          "w": 3
+        }
+      ],
+      "heroH": 866,
+      "embers": "hero__embers is-ready",
+      "canvas": [
+        778,
+        866
+      ],
+      "fonts": "loaded"
+    },
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": []
+  },
+  "laptop": {
+    "metrics": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "scrollWidth": 1280,
+      "scrollHeight": 9330,
+      "overflowX": false,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "marquee__track",
+          "left": -91,
+          "right": 1482,
+          "w": 1572
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": -91,
+          "right": 696,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": -91,
+          "right": -24,
+          "w": 66
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": 696,
+          "right": 1482,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1294,
+          "right": 1297,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1331,
+          "right": 1411,
+          "w": 79
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1445,
+          "right": 1448,
+          "w": 3
+        }
+      ],
+      "heroH": 766,
+      "embers": "hero__embers is-ready",
+      "canvas": [
+        691,
+        766
+      ],
+      "fonts": "loaded"
+    },
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": []
+  },
+  "tablet": {
+    "metrics": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 8159,
+      "overflowX": false,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "marquee__track",
+          "left": -89,
+          "right": 1484,
+          "w": 1572
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": -89,
+          "right": 697,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": -89,
+          "right": -22,
+          "w": 66
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": 697,
+          "right": 1484,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1003,
+          "right": 1088,
+          "w": 86
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1122,
+          "right": 1125,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1159,
+          "right": 1262,
+          "w": 103
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1296,
+          "right": 1299,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1333,
+          "right": 1413,
+          "w": 79
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1447,
+          "right": 1450,
+          "w": 3
+        }
+      ],
+      "heroH": 734,
+      "embers": "hero__embers is-ready",
+      "canvas": [
+        543,
+        734
+      ],
+      "fonts": "loaded"
+    },
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": []
+  },
+  "tablet-sm": {
+    "metrics": {
+      "innerWidth": 768,
+      "innerHeight": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 10862,
+      "overflowX": false,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "marquee__track",
+          "left": -91,
+          "right": 1482,
+          "w": 1572
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": -91,
+          "right": 696,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": -91,
+          "right": -24,
+          "w": 66
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": 696,
+          "right": 1482,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 796,
+          "right": 799,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 833,
+          "right": 930,
+          "w": 97
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 964,
+          "right": 967,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1001,
+          "right": 1087,
+          "w": 86
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1121,
+          "right": 1124,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1158,
+          "right": 1260,
+          "w": 103
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1294,
+          "right": 1297,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1331,
+          "right": 1411,
+          "w": 79
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1445,
+          "right": 1448,
+          "w": 3
+        }
+      ],
+      "heroH": 1208,
+      "embers": "hero__embers",
+      "canvas": [
+        300,
+        150
+      ],
+      "fonts": "loaded"
+    },
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": []
+  },
+  "mobile": {
+    "metrics": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 12738,
+      "overflowX": false,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "marquee__track",
+          "left": -91,
+          "right": 1481,
+          "w": 1572
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": -91,
+          "right": 695,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": -91,
+          "right": -24,
+          "w": 66
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 371,
+          "right": 474,
+          "w": 103
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 508,
+          "right": 511,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 545,
+          "right": 624,
+          "w": 79
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 658,
+          "right": 661,
+          "w": 3
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": 695,
+          "right": 1481,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 695,
+          "right": 762,
+          "w": 66
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 796,
+          "right": 799,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 833,
+          "right": 929,
+          "w": 97
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 963,
+          "right": 966,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1000,
+          "right": 1086,
+          "w": 86
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1120,
+          "right": 1123,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1157,
+          "right": 1260,
+          "w": 103
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1294,
+          "right": 1297,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1331,
+          "right": 1410,
+          "w": 79
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1444,
+          "right": 1447,
+          "w": 3
+        },
+        {
+          "tag": "DIV",
+          "cls": "menu__tabs",
+          "left": 16,
+          "right": 543,
+          "w": 527
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "menu__tab",
+          "left": 329,
+          "right": 400,
+          "w": 71
+        }
+      ],
+      "heroH": 971,
+      "embers": "hero__embers",
+      "canvas": [
+        300,
+        150
+      ],
+      "fonts": "loaded"
+    },
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": []
+  },
+  "mobile-sm": {
+    "metrics": {
+      "innerWidth": 360,
+      "innerHeight": 780,
+      "scrollWidth": 360,
+      "scrollHeight": 12435,
+      "overflowX": false,
+      "offenders": [
+        {
+          "tag": "DIV",
+          "cls": "marquee__track",
+          "left": -91,
+          "right": 1482,
+          "w": 1572
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": -91,
+          "right": 696,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": -91,
+          "right": -24,
+          "w": 66
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 371,
+          "right": 474,
+          "w": 103
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 508,
+          "right": 511,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 545,
+          "right": 625,
+          "w": 79
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 659,
+          "right": 662,
+          "w": 3
+        },
+        {
+          "tag": "DIV",
+          "cls": "marquee__group",
+          "left": 696,
+          "right": 1482,
+          "w": 786
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 696,
+          "right": 762,
+          "w": 66
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 796,
+          "right": 799,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 833,
+          "right": 930,
+          "w": 97
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 964,
+          "right": 967,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1001,
+          "right": 1087,
+          "w": 86
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1121,
+          "right": 1124,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1158,
+          "right": 1260,
+          "w": 103
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1294,
+          "right": 1297,
+          "w": 3
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "left": 1331,
+          "right": 1411,
+          "w": 79
+        },
+        {
+          "tag": "SPAN",
+          "cls": "marquee__dot",
+          "left": 1445,
+          "right": 1448,
+          "w": 3
+        },
+        {
+          "tag": "DIV",
+          "cls": "menu__tabs",
+          "left": 16,
+          "right": 543,
+          "w": 527
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "menu__tab",
+          "left": 329,
+          "right": 400,
+          "w": 71
+        }
+      ],
+      "heroH": 933,
+      "embers": "hero__embers",
+      "canvas": [
+        300,
+        150
+      ],
+      "fonts": "loaded"
+    },
+    "console_errors": [],
+    "page_errors": [],
+    "failed_requests": []
+  }
+}

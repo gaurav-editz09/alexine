@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0A09">
+  <meta name="color-scheme" content="dark">
+
+  <title>Ember &amp; Spice — Live-Fire Indian Dining in London | Concept Demo</title>
+  <meta name="description" content="Ember &amp; Spice is a fictional contemporary Indian restaurant in Shoreditch, London. A premium restaurant website concept built around one open hearth. Demo content only.">
+  <!-- Demo site: noindex keeps fictional business data out of search results. Remove on a live launch. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://emberandspice.example/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ember &amp; Spice">
+  <meta property="og:title" content="Ember &amp; Spice — Cooked by fire. Seasoned by memory.">
+  <meta property="og:description" content="A concept demo for a fictional live-fire Indian restaurant in Shoreditch, London. Business details, dishes and prices are illustrative.">
+  <meta property="og:url" content="https://emberandspice.example/">
+  <meta property="og:image" content="https://emberandspice.example/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ember &amp; Spice — Cooked by fire. Seasoned by memory.">
+  <meta name="twitter:description" content="A concept demo for a fictional live-fire Indian restaurant in Shoreditch, London.">
+  <meta name="twitter:image" content="https://emberandspice.example/assets/img/og.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/og.jpg">
+
+  <link rel="preload" href="assets/fonts/InstrumentSerif-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/InstrumentSerif-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Manrope-200-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-1800.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/img/hero-mobile-1000.webp" media="(max-width: 767px)">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Ember & Spice",
+    "description": "A concept demo for a fictional contemporary Indian restaurant in Shoreditch, London, built around a live fire. All business details are illustrative.",
+    "url": "https://emberandspice.example/",
+    "image": "https://emberandspice.example/assets/img/og.jpg",
+    "servesCuisine": ["Contemporary Indian", "Live-fire cooking"],
+    "priceRange": "£££",
+    "telephone": "+44-20-0000-0000",
+    "email": "hello@emberandspice.example",
+    "acceptsReservations": false,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 Kestrel Lane",
+      "addressLocality": "London",
+      "addressRegion": "Shoreditch",
+      "postalCode": "E2 7DP",
+      "addressCountry": "GB"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "17:30", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "17:30", "closes": "00:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "20:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10.5M9 3.5 13.5 8 9 12.5"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 16 16"><path d="M8 13.5V2.5M3.5 7 8 2.5 12.5 7"/></symbol>
+    <symbol id="icon-flame" viewBox="0 0 24 24"><path d="M12.2 21c3.8 0 6.8-2.8 6.8-6.6 0-4.2-3.5-6.2-4.6-9.9-.4-1.2-1.9-1.3-2.4-.1-.8 1.9-2.6 3-4.1 4.6-1.5 1.6-2.9 3.3-2.9 5.4 0 3.8 3.3 6.6 7.2 6.6Z"/><path d="M12.1 21c1.9 0 3.4-1.4 3.4-3.3 0-2.1-1.7-3-2.3-4.8-.2-.6-1-.6-1.2 0-.4 1-1.3 1.5-2 2.3-.7.8-1.4 1.6-1.4 2.6 0 1.8 1.6 3.2 3.5 3.2Z"/></symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.5 13.4L3.2 21l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z"/><path d="M9.1 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.2 4.9 4.4 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5l-.7-1.7Z"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r=".8" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24"><path d="M12 21s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10Z"/><circle cx="12" cy="11" r="2.2"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.2 3.8 9 8.2 7.2 10c1.1 2.3 2.7 3.9 5 5l1.8-1.8 4.4 2.8-.6 2.4c-.2.8-1 1.3-1.8 1.2C9.3 18.8 5.2 14.7 4.4 8c-.1-.8.4-1.6 1.2-1.8l.6-.4Z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-prev" viewBox="0 0 24 24"><path d="M14.5 5.5 8 12l6.5 6.5"/></symbol>
+    <symbol id="icon-next" viewBox="0 0 24 24"><path d="M9.5 5.5 16 12l-6.5 6.5"/></symbol>
+  </svg>
+
+  <div class="demo-bar">
+    <span class="demo-bar__dot" aria-hidden="true"></span>
+    <span class="demo-bar__long">Concept demo — a fictional restaurant. All business details are placeholders.</span>
+    <span class="demo-bar__short">Concept demo — fictional restaurant</span>
+    <a href="#contact">Details</a>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#home" aria-label="Ember and Spice — home">
+        <svg class="brand__mark" aria-hidden="true"><use href="#icon-flame"></use></svg>
+        <span class="brand__text">
+          <span class="brand__name">Ember <em>&amp;</em> Spice</span>
+          <span class="brand__place">London · Est. 2019</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#story" data-nav>Story</a>
+        <a class="nav__link" href="#dishes" data-nav>Dishes</a>
+        <a class="nav__link" href="#menu" data-nav>Menu</a>
+        <a class="nav__link" href="#gallery" data-nav>Gallery</a>
+        <a class="nav__link" href="#experience" data-nav>Experience</a>
+        <a class="nav__link nav__link--contact" href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="btn btn--reserve" type="button" data-open-reserve>
+          Reserve
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HOME / HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          Shoreditch, London <span class="eyebrow__sep" aria-hidden="true">·</span> Est. 2019
+          <span class="demo-chip">Concept demo</span>
+        </p>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span>Cooked by fire.</span></span>
+          <span class="line"><span>Seasoned by</span></span>
+          <span class="line line--indent"><span><em>memory.</em></span></span>
+        </h1>
+
+        <p class="hero__lede">A modern Indian kitchen built around one open hearth. Coastal spice, northern smoke, and a menu that follows the season.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#menu">
+            Explore the menu
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+          </a>
+          <button class="btn btn--ghost" type="button" data-open-reserve>Reserve a table</button>
+        </div>
+
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Dinner</span>
+            <span>Tue–Sat, from 17:30</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Chef’s counter</span>
+            <span>Eight seats, one fire</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__media" data-hero-media>
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/img/hero-mobile-700.webp 700w, assets/img/hero-mobile-1000.webp 1000w" sizes="100vw">
+          <img src="assets/img/hero-1800.webp" srcset="assets/img/hero-1200.webp 1200w, assets/img/hero-1800.webp 1800w" sizes="(min-width: 768px) 54vw, 100vw" width="1800" height="1126" alt="Sliced charcoal-grilled ribeye with a dark, caramelised crust on a wooden board." fetchpriority="high" decoding="async">
+        </picture>
+        <canvas class="hero__embers" id="embers" aria-hidden="true"></canvas>
+        <div class="hero__caption">
+          <span class="hero__caption-index">01</span>
+          <div>
+            <span class="hero__caption-label">From the hearth</span>
+            <p>Charcoal ribeye · burnt onion · bone marrow butter</p>
+          </div>
+        </div>
+        <a class="hero__scroll" href="#story" aria-label="Scroll to our story">
+          <span>Scroll</span>
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Charcoal</span><span class="marquee__dot"></span>
+        <span>Coastal spice</span><span class="marquee__dot"></span>
+        <span>Open hearth</span><span class="marquee__dot"></span>
+        <span>Seasonal menu</span><span class="marquee__dot"></span>
+        <span>Shoreditch</span><span class="marquee__dot"></span>
+        <span>Charcoal</span><span class="marquee__dot"></span>
+        <span>Coastal spice</span><span class="marquee__dot"></span>
+        <span>Open hearth</span><span class="marquee__dot"></span>
+        <span>Seasonal menu</span><span class="marquee__dot"></span>
+        <span>Shoreditch</span><span class="marquee__dot"></span>
+      </div>
+      <p class="sr-only">Charcoal, coastal spice, open hearth, seasonal menu, Shoreditch.</p>
+    </div>

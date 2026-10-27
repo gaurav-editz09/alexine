@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0A09">
+  <meta name="color-scheme" content="dark">
+
+  <title>Ember &amp; Spice — Live-Fire Indian Dining in London | Concept Demo</title>
+  <meta name="description" content="Ember &amp; Spice is a fictional contemporary Indian restaurant in Shoreditch, London. A premium restaurant website concept built around one open hearth. Demo content only.">
+  <!-- Demo site: noindex keeps fictional business data out of search results. Remove on a live launch. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://emberandspice.example/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ember &amp; Spice">
+  <meta property="og:title" content="Ember &amp; Spice — Cooked by fire. Seasoned by memory.">
+  <meta property="og:description" content="A concept demo for a fictional live-fire Indian restaurant in Shoreditch, London. Business details, dishes and prices are illustrative.">
+  <meta property="og:url" content="https://emberandspice.example/">
+  <meta property="og:image" content="https://emberandspice.example/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ember &amp; Spice — Cooked by fire. Seasoned by memory.">
+  <meta name="twitter:description" content="A concept demo for a fictional live-fire Indian restaurant in Shoreditch, London.">
+  <meta name="twitter:image" content="https://emberandspice.example/assets/img/og.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/og.jpg">
+
+  <link rel="preload" href="assets/fonts/InstrumentSerif-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/InstrumentSerif-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Manrope-200-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-1800.webp" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/img/hero-mobile-1000.webp" media="(max-width: 767px)">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Ember & Spice",
+    "description": "A concept demo for a fictional contemporary Indian restaurant in Shoreditch, London, built around a live fire. All business details are illustrative.",
+    "url": "https://emberandspice.example/",
+    "image": "https://emberandspice.example/assets/img/og.jpg",
+    "servesCuisine": ["Contemporary Indian", "Live-fire cooking"],
+    "priceRange": "£££",
+    "telephone": "+44-20-0000-0000",
+    "email": "hello@emberandspice.example",
+    "acceptsReservations": false,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 Kestrel Lane",
+      "addressLocality": "London",
+      "addressRegion": "Shoreditch",
+      "postalCode": "E2 7DP",
+      "addressCountry": "GB"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "17:30", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "17:30", "closes": "00:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "20:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10.5M9 3.5 13.5 8 9 12.5"/></symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 16 16"><path d="M8 13.5V2.5M3.5 7 8 2.5 12.5 7"/></symbol>
+    <symbol id="icon-flame" viewBox="0 0 24 24"><path d="M12.2 21c3.8 0 6.8-2.8 6.8-6.6 0-4.2-3.5-6.2-4.6-9.9-.4-1.2-1.9-1.3-2.4-.1-.8 1.9-2.6 3-4.1 4.6-1.5 1.6-2.9 3.3-2.9 5.4 0 3.8 3.3 6.6 7.2 6.6Z"/><path d="M12.1 21c1.9 0 3.4-1.4 3.4-3.3 0-2.1-1.7-3-2.3-4.8-.2-.6-1-.6-1.2 0-.4 1-1.3 1.5-2 2.3-.7.8-1.4 1.6-1.4 2.6 0 1.8 1.6 3.2 3.5 3.2Z"/></symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.5 13.4L3.2 21l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z"/><path d="M9.1 7.6c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.2 4.9 4.4 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3-.1-.5l-.7-1.7Z"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r=".8" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24"><path d="M12 21s6-5.3 6-10a6 6 0 1 0-12 0c0 4.7 6 10 6 10Z"/><circle cx="12" cy="11" r="2.2"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.2 3.8 9 8.2 7.2 10c1.1 2.3 2.7 3.9 5 5l1.8-1.8 4.4 2.8-.6 2.4c-.2.8-1 1.3-1.8 1.2C9.3 18.8 5.2 14.7 4.4 8c-.1-.8.4-1.6 1.2-1.8l.6-.4Z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-prev" viewBox="0 0 24 24"><path d="M14.5 5.5 8 12l6.5 6.5"/></symbol>
+    <symbol id="icon-next" viewBox="0 0 24 24"><path d="M9.5 5.5 16 12l-6.5 6.5"/></symbol>
+  </svg>
+
+  <div class="demo-bar">
+    <span class="demo-bar__dot" aria-hidden="true"></span>
+    <span class="demo-bar__long">Concept demo — a fictional restaurant. All business details are placeholders.</span>
+    <span class="demo-bar__short">Concept demo — fictional restaurant</span>
+    <a href="#contact">Details</a>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#home" aria-label="Ember and Spice — home">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flame"></use></svg>
+        <span class="brand__text">
+          <span class="brand__name">Ember <em>&amp;</em> Spice</span>
+          <span class="brand__place">London · Est. 2019</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#story" data-nav>Story</a>
+        <a class="nav__link" href="#dishes" data-nav>Dishes</a>
+        <a class="nav__link" href="#menu" data-nav>Menu</a>
+        <a class="nav__link" href="#gallery" data-nav>Gallery</a>
+        <a class="nav__link" href="#experience" data-nav>Experience</a>
+        <a class="nav__link nav__link--contact" href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="btn btn--reserve" type="button" data-open-reserve>
+          Reserve
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HOME / HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          Shoreditch, London <span class="eyebrow__sep" aria-hidden="true">·</span> Est. 2019
+          <span class="demo-chip">Concept demo</span>
+        </p>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span>Cooked by fire.</span></span>
+          <span class="line"><span>Seasoned by</span></span>
+          <span class="line line--indent"><span><em>memory.</em></span></span>
+        </h1>
+
+        <p class="hero__lede">A modern Indian kitchen built around one open hearth. Coastal spice, northern smoke, and a menu that follows the season.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#menu">
+            Explore the menu
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+          </a>
+          <button class="btn btn--ghost" type="button" data-open-reserve>Reserve a table</button>
+        </div>
+
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Dinner</span>
+            <span>Tue–Sat, from 17:30</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Chef’s counter</span>
+            <span>Eight seats, one fire</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__media" data-hero-media>
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/img/hero-mobile-700.webp 700w, assets/img/hero-mobile-1000.webp 1000w" sizes="100vw">
+          <img src="assets/img/hero-1800.webp" srcset="assets/img/hero-1200.webp 1200w, assets/img/hero-1800.webp 1800w" sizes="(min-width: 768px) 54vw, 100vw" width="1800" height="1126" alt="Sliced charcoal-grilled ribeye with a dark, caramelised crust on a wooden board." fetchpriority="high" decoding="async">
+        </picture>
+        <canvas class="hero__embers" id="embers" aria-hidden="true"></canvas>
+        <div class="hero__caption">
+          <span class="hero__caption-index">01</span>
+          <div>
+            <span class="hero__caption-label">From the hearth</span>
+            <p>Charcoal ribeye · burnt onion · bone marrow butter</p>
+          </div>
+        </div>
+        <a class="hero__scroll" href="#story" aria-label="Scroll to our story">
+          <span>Scroll</span>
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Charcoal</span><span class="marquee__dot"></span>
+          <span>Coastal spice</span><span class="marquee__dot"></span>
+          <span>Open hearth</span><span class="marquee__dot"></span>
+          <span>Seasonal menu</span><span class="marquee__dot"></span>
+          <span>Shoreditch</span><span class="marquee__dot"></span>
+        </div>
+        <div class="marquee__group">
+          <span>Charcoal</span><span class="marquee__dot"></span>
+          <span>Coastal spice</span><span class="marquee__dot"></span>
+          <span>Open hearth</span><span class="marquee__dot"></span>
+          <span>Seasonal menu</span><span class="marquee__dot"></span>
+          <span>Shoreditch</span><span class="marquee__dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ OUR STORY ============ -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="container story__grid">
+        <div class="story__visual">
+          <span class="story__since" aria-hidden="true">Since 2019</span>
+          <figure class="story__figure story__figure--main reveal">
+            <img src="assets/img/story-spices-800.webp" srcset="assets/img/story-spices-500.webp 500w, assets/img/story-spices-800.webp 800w" sizes="(min-width: 900px) 34vw, 80vw" width="800" height="1067" loading="lazy" decoding="async" alt="Metal bowls of whole spices — chillies, cardamom, cinnamon and peppercorns — at a Malabar coast market.">
+            <figcaption>Whole spices, sourced along the Malabar coast</figcaption>
+          </figure>
+          <figure class="story__figure story__figure--small reveal" style="--delay: 120ms">
+            <img src="assets/img/story-chef-900.webp" srcset="assets/img/story-chef-600.webp 600w, assets/img/story-chef-900.webp 900w" sizes="(min-width: 900px) 20vw, 44vw" width="900" height="1125" loading="lazy" decoding="async" alt="A chef finely slicing green chillies on a white board before service.">
+            <figcaption>Precision, before the doors open</figcaption>
+          </figure>
+        </div>
+
+        <div class="story__copy">
+          <p class="label reveal"><span class="label__num">01</span> Our story</p>
+          <h2 class="story__title reveal" style="--delay: 60ms">We cook with fire, <em>because fire remembers.</em></h2>
+          <p class="story__lede reveal" style="--delay: 120ms">Ember &amp; Spice began with a simple obsession: the moment a spice hits a live flame. That split second when cardamom turns sweet, chilli turns smoky, and everything you thought you knew about Indian food changes.</p>
+          <div class="story__body reveal" style="--delay: 160ms">
+            <p>We source whole spices from small growers along the Malabar coast, temper them daily, and cook over English oak and Binchotan. Nothing is rushed. Nothing is hidden. The kitchen is open, the fire is real, and the menu follows the season — not the other way round.</p>
+            <p>The room is small on purpose. Thirty-four seats, a handful of tables, and eight stools at the counter where you can watch every flame, every turn, every plate leave the pass.</p>
+          </div>
+
+          <div class="story__stats reveal" style="--delay: 200ms">
+            <div class="stat"><span class="stat__value">2019</span><span class="stat__label">Opened in Shoreditch</span></div>
+            <div class="stat"><span class="stat__value">34</span><span class="stat__label">Seats, one sitting</span></div>
+            <div class="stat"><span class="stat__value">08</span><span class="stat__label">At the chef’s counter</span></div>
+          </div>
+
+          <p class="story__signature reveal" style="--delay: 240ms">
+            <span class="story__signature-name">Nadia Rao</span>
+            <span class="story__signature-role">Chef–Founder · fictional</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIGNATURE DISHES ============ -->
+    <section class="section dishes" id="dishes" aria-labelledby="dishes-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__left">
+            <p class="label reveal"><span class="label__num">02</span> Signature dishes</p>
+            <h2 class="section-title reveal" id="dishes-title" style="--delay: 60ms">Six reasons to stay <em>for the second bottle.</em></h2>
+          </div>
+          <div class="section-head__right reveal" style="--delay: 120ms">
+            <p>A short list from the current menu. The fire changes it often — these are the plates we are known for.</p>
+            <a class="text-link" href="#menu">View the full menu <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+          </div>
+        </header>
+
+        <div class="dish-grid">
+          <article class="dish reveal">
+            <a class="dish__media" href="#menu" aria-label="View the full menu — 12-Hour Short Rib">
+              <img src="assets/img/dish-shortrib-900.webp" srcset="assets/img/dish-shortrib-600.webp 600w, assets/img/dish-shortrib-900.webp 900w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" width="900" height="1125" loading="lazy" decoding="async" alt="Twelve-hour short rib, sliced to reveal a pink centre, on a dark wooden board.">
+              <span class="dish__view" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+            </a>
+            <div class="dish__body">
+              <p class="dish__meta"><span class="dish__index">01</span><span>From the fire</span><span class="dish__diet">GF</span></p>
+              <div class="dish__row"><h3 class="dish__name">12-Hour Short Rib</h3><span class="dish__price">£38</span></div>
+              <p class="dish__desc">English oak, black cardamom, burnt onion jus</p>
+            </div>
+          </article>
+
+          <article class="dish reveal" style="--delay: 80ms">
+            <a class="dish__media" href="#menu" aria-label="View the full menu — Ember Butter Chicken">
+              <img src="assets/img/dish-butterchicken-900.webp" srcset="assets/img/dish-butterchicken-600.webp 600w, assets/img/dish-butterchicken-900.webp 900w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" width="900" height="1125" loading="lazy" decoding="async" alt="Ember butter chicken in a dark pan, finished with cultured butter and fenugreek.">
+              <span class="dish__view" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+            </a>
+            <div class="dish__body">
+              <p class="dish__meta"><span class="dish__index">02</span><span>The hearth</span><span class="dish__diet">GF</span></p>
+              <div class="dish__row"><h3 class="dish__name">Ember Butter Chicken</h3><span class="dish__price">£26</span></div>
+              <p class="dish__desc">Charred tomato, cultured butter, fenugreek</p>
+            </div>
+          </article>
+
+          <article class="dish reveal" style="--delay: 160ms">
+            <a class="dish__media" href="#menu" aria-label="View the full menu — Malabar Prawn Linguine">
+              <img src="assets/img/dish-prawn-900.webp" srcset="assets/img/dish-prawn-600.webp 600w, assets/img/dish-prawn-900.webp 900w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" width="900" height="1125" loading="lazy" decoding="async" alt="Malabar prawn linguine with tiger prawns, tomato and curry leaf in a black pan.">
+              <span class="dish__view" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+            </a>
+            <div class="dish__body">
+              <p class="dish__meta"><span class="dish__index">03</span><span>Coastal</span></p>
+              <div class="dish__row"><h3 class="dish__name">Malabar Prawn Linguine</h3><span class="dish__price">£29</span></div>
+              <p class="dish__desc">Tiger prawns, kokum, curry leaf, chilli butter</p>
+            </div>
+          </article>
+
+          <article class="dish reveal" style="--delay: 40ms">
+            <a class="dish__media" href="#menu" aria-label="View the full menu — Tandoori Mixed Grill">
+              <img src="assets/img/dish-grill-900.webp" srcset="assets/img/dish-grill-600.webp 600w, assets/img/dish-grill-900.webp 900w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" width="900" height="1125" loading="lazy" decoding="async" alt="A tandoori mixed grill platter with lamb chops, chicken, seekh kebab and mint chutney.">
+              <span class="dish__view" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+            </a>
+            <div class="dish__body">
+              <p class="dish__meta"><span class="dish__index">04</span><span>For two</span><span class="dish__diet">GF</span></p>
+              <div class="dish__row"><h3 class="dish__name">Tandoori Mixed Grill</h3><span class="dish__price">£42</span></div>
+              <p class="dish__desc">Lamb chop, chicken malai, seekh, mint ash</p>
+            </div>
+          </article>
+
+          <article class="dish reveal" style="--delay: 120ms">
+            <a class="dish__media" href="#menu" aria-label="View the full menu — Dum Biryani">
+              <img src="assets/img/dish-biryani-900.webp" srcset="assets/img/dish-biryani-600.webp 600w, assets/img/dish-biryani-900.webp 900w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" width="900" height="1125" loading="lazy" decoding="async" alt="Dum biryani with aged basmati, saffron, fried onion and herbs, served on a dark plate.">
+              <span class="dish__view" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+            </a>
+            <div class="dish__body">
+              <p class="dish__meta"><span class="dish__index">05</span><span>Slow-cooked</span></p>
+              <div class="dish__row"><h3 class="dish__name">Dum Biryani</h3><span class="dish__price">£27</span></div>
+              <p class="dish__desc">Aged basmati, saffron, fried onion, mirchi ka salan</p>
+            </div>
+          </article>
+
+          <article class="dish reveal" style="--delay: 200ms">
+            <a class="dish__media" href="#menu" aria-label="View the full menu — Burnt Honey Sundae">
+              <img src="assets/img/dish-dessert-900.webp" srcset="assets/img/dish-dessert-600.webp 600w, assets/img/dish-dessert-900.webp 900w" sizes="(min-width: 1100px) 30vw, (min-width: 700px) 45vw, 90vw" width="900" height="1125" loading="lazy" decoding="async" alt="Burnt honey sundae with smoked chocolate, vanilla ice cream and a caramel pour.">
+              <span class="dish__view" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+            </a>
+            <div class="dish__body">
+              <p class="dish__meta"><span class="dish__index">06</span><span>To finish</span><span class="dish__diet">V</span></p>
+              <div class="dish__row"><h3 class="dish__name">Burnt Honey Sundae</h3><span class="dish__price">£14</span></div>
+              <p class="dish__desc">Smoked chocolate, pistachio, sea salt</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="dishes__foot reveal">
+          <p>Menus change with the season. Please tell us about allergies when you book.</p>
+          <button class="text-link" type="button" data-open-reserve>Reserve a table <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section class="section section--cream menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head section-head--dark">
+          <div class="section-head__left">
+            <p class="label reveal"><span class="label__num">03</span> The menu</p>
+            <h2 class="section-title reveal" id="menu-title" style="--delay: 60ms">A menu written <em>by the fire.</em></h2>
+          </div>
+          <div class="section-head__right reveal" style="--delay: 120ms">
+            <p>Five chapters, one hearth. Dishes are designed to share, though nobody will judge you if they don’t. The kitchen adapts to the season and the market.</p>
+            <p class="menu__currency">Prices in GBP · Demo menu</p>
+          </div>
+        </header>
+
+        <div class="menu__tabs-wrap reveal">
+          <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+            <button class="menu__tab is-active" id="tab-starters" role="tab" aria-selected="true" aria-controls="panel-starters" tabindex="0"><span>01</span> To begin</button>
+            <button class="menu__tab" id="tab-fire" role="tab" aria-selected="false" aria-controls="panel-fire" tabindex="-1"><span>02</span> From the fire</button>
+            <button class="menu__tab" id="tab-garden" role="tab" aria-selected="false" aria-controls="panel-garden" tabindex="-1"><span>03</span> Garden &amp; sides</button>
+            <button class="menu__tab" id="tab-desserts" role="tab" aria-selected="false" aria-controls="panel-desserts" tabindex="-1"><span>04</span> Desserts</button>
+            <button class="menu__tab" id="tab-cellar" role="tab" aria-selected="false" aria-controls="panel-cellar" tabindex="-1"><span>05</span> Cellar &amp; cocktails</button>
+            <span class="menu__tab-line" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="menu__body">
+          <div class="menu__panels">
+            <div class="menu__panel is-active" id="panel-starters" role="tabpanel" aria-labelledby="tab-starters" tabindex="0">
+              <div class="menu__panel-head">
+                <h3>To begin</h3>
+                <p>Small plates with sharp edges — built to wake up the palate.</p>
+              </div>
+              <div class="menu__items">
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Dahi Puri <span class="diet">V</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£9</span></div>
+                  <p>Crisp semolina, tamarind, pomegranate, yoghurt</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Lamb Samosa</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£11</span></div>
+                  <p>Hand-rolled, mint chutney, burnt lime</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Beef Carpaccio <span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£14</span></div>
+                  <p>Saffron aioli, pink peppercorn, cured yolk</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Smoked Duck Dumplings</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£13</span></div>
+                  <p>Chilli oil, black vinegar, coriander</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Charred Oysters <span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£16</span></div>
+                  <p>Kokum, pink pepper, lime — half dozen</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu__panel" id="panel-fire" role="tabpanel" aria-labelledby="tab-fire" tabindex="0" hidden>
+              <div class="menu__panel-head">
+                <h3>From the fire</h3>
+                <p>The heart of the kitchen. Everything here meets the hearth.</p>
+              </div>
+              <div class="menu__items">
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Charcoal Ribeye <span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£46</span></div>
+                  <p>45-day aged, bone marrow butter, burnt onion</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>12-Hour Short Rib <span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£38</span></div>
+                  <p>English oak, black cardamom, burnt onion jus</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Ember Butter Chicken <span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£26</span></div>
+                  <p>Charred tomato, cultured butter, fenugreek</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Malabar Prawn Linguine</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£29</span></div>
+                  <p>Tiger prawns, kokum, curry leaf, chilli butter</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Tandoori Mixed Grill <span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£42</span></div>
+                  <p>Lamb chop, chicken malai, seekh, mint ash</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Burnt Orange Pork Belly</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£32</span></div>
+                  <p>Goan chorizo, jaggery, pickled mustard</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu__panel" id="panel-garden" role="tabpanel" aria-labelledby="tab-garden" tabindex="0" hidden>
+              <div class="menu__panel-head">
+                <h3>Garden &amp; sides</h3>
+                <p>Vegetables treated with the same respect as the fire.</p>
+              </div>
+              <div class="menu__items">
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Charred Squash <span class="diet">VG</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£12</span></div>
+                  <p>Tamarind glaze, sesame, curry leaf</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Smoked Aubergine <span class="diet">V</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£11</span></div>
+                  <p>Burnt garlic, yoghurt, pomegranate</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>House Naan <span class="diet">V</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£5</span></div>
+                  <p>Cultured butter, nigella, sea salt</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Kachumber <span class="diet">VG</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£7</span></div>
+                  <p>Cucumber, tomato, shallot, lime</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Saffron Rice <span class="diet">V</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£6</span></div>
+                  <p>Aged basmati, fried onion, bay</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Cucumber Raita <span class="diet">V</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£5</span></div>
+                  <p>Cucumber, mint, toasted cumin</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu__panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" tabindex="0" hidden>
+              <div class="menu__panel-head">
+                <h3>Desserts</h3>
+                <p>Burnt sugar, warm spice, a little salt.</p>
+              </div>
+              <div class="menu__items">
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Burnt Honey Sundae <span class="diet">V</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£14</span></div>
+                  <p>Smoked chocolate, pistachio, sea salt</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Saffron &amp; Pistachio Kulfi <span class="diet">V</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£11</span></div>
+                  <p>Rose, toasted almond</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Dark Chocolate &amp; Chilli Tart <span class="diet">VG</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£12</span></div>
+                  <p>Coconut sorbet, cocoa nib</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Mango &amp; Cardamom Pavlova <span class="diet">V</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£11</span></div>
+                  <p>Lime leaf, whipped cream</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Cheese &amp; Chutney <span class="diet">V</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£13</span></div>
+                  <p>Montgomery cheddar, quince, papad</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu__panel" id="panel-cellar" role="tabpanel" aria-labelledby="tab-cellar" tabindex="0" hidden>
+              <div class="menu__panel-head">
+                <h3>Cellar &amp; cocktails</h3>
+                <p>Low-intervention wines, house infusions, and a proper cup of chai.</p>
+              </div>
+              <div class="menu__items">
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Smoked Old Fashioned</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£14</span></div>
+                  <p>Rye, jaggery, orange oil</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Kokum Negroni</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£13</span></div>
+                  <p>Gin, kokum, sweet vermouth</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Rose &amp; Cardamom Spritz</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£12</span></div>
+                  <p>Vodka, rose, soda</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Masala Chai <span class="diet">V</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£5</span></div>
+                  <p>Assam, cardamom, ginger, milk</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Salted Lime Soda <span class="diet">VG</span><span class="diet">GF</span></h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£5</span></div>
+                  <p>Lime, black salt, soda</p>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item__row"><h4>Sommelier’s Pairing</h4><span class="menu-item__leader" aria-hidden="true"></span><span class="menu-item__price">£45</span></div>
+                  <p>Five pours, chosen nightly</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="menu__visual" aria-hidden="true">
+            <figure class="menu__figure is-active" data-panel-img="starters">
+              <img src="assets/img/menu-starters-800.webp" srcset="assets/img/menu-starters-500.webp 500w, assets/img/menu-starters-800.webp 800w" sizes="(min-width: 900px) 34vw, 90vw" width="800" height="1001" loading="lazy" decoding="async" alt="">
+              <figcaption><span>01</span> To begin</figcaption>
+            </figure>
+            <figure class="menu__figure" data-panel-img="fire">
+              <img src="assets/img/menu-fire-800.webp" srcset="assets/img/menu-fire-500.webp 500w, assets/img/menu-fire-800.webp 800w" sizes="(min-width: 900px) 34vw, 90vw" width="800" height="1000" loading="lazy" decoding="async" alt="">
+              <figcaption><span>02</span> From the fire</figcaption>
+            </figure>
+            <figure class="menu__figure" data-panel-img="garden">
+              <img src="assets/img/menu-garden-800.webp" srcset="assets/img/menu-garden-500.webp 500w, assets/img/menu-garden-800.webp 800w" sizes="(min-width: 900px) 34vw, 90vw" width="800" height="1001" loading="lazy" decoding="async" alt="">
+              <figcaption><span>03</span> Garden &amp; sides</figcaption>
+            </figure>
+            <figure class="menu__figure" data-panel-img="desserts">
+              <img src="assets/img/menu-desserts-800.webp" srcset="assets/img/menu-desserts-500.webp 500w, assets/img/menu-desserts-800.webp 800w" sizes="(min-width: 900px) 34vw, 90vw" width="800" height="1000" loading="lazy" decoding="async" alt="">
+              <figcaption><span>04</span> Desserts</figcaption>
+            </figure>
+            <figure class="menu__figure" data-panel-img="cellar">
+              <img src="assets/img/menu-cellar-800.webp" srcset="assets/img/menu-cellar-500.webp 500w, assets/img/menu-cellar-800.webp 800w" sizes="(min-width: 900px) 34vw, 90vw" width="800" height="1000" loading="lazy" decoding="async" alt="">
+              <figcaption><span>05</span> Cellar &amp; cocktails</figcaption>
+            </figure>
+            <p class="menu__visual-note">From tonight’s menu</p>
+          </aside>
+        </div>
+
+        <footer class="menu__foot reveal">
+          <div class="menu__key">
+            <span><strong>V</strong> Vegetarian</span>
+            <span><strong>VG</strong> Vegan</span>
+            <span><strong>GF</strong> Gluten-free</span>
+          </div>
+          <p>Please tell us about allergies. A discretionary 12.5% service charge is added. <span class="menu__demo">Demo menu — dishes and prices are illustrative.</span></p>
+          <button class="btn btn--dark" type="button" data-open-reserve>Reserve a table <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__left">
+            <p class="label reveal"><span class="label__num">04</span> The room</p>
+            <h2 class="section-title reveal" id="gallery-title" style="--delay: 60ms">Low light. <em>High heat.</em></h2>
+          </div>
+          <div class="section-head__right reveal" style="--delay: 120ms">
+            <p>A look inside the room, the bar and the pass — photographed over one service. Select an image to see it larger.</p>
+          </div>
+        </header>
+
+        <div class="gallery__grid">
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-room-1200.webp" data-full-srcset="assets/img/gallery-room-800.webp 800w, assets/img/gallery-room-1200.webp 1200w" data-caption="The dining room, before the first sitting" aria-label="Enlarge image: The dining room, before the first sitting">
+            <img src="assets/img/gallery-room-1200.webp" srcset="assets/img/gallery-room-800.webp 800w, assets/img/gallery-room-1200.webp 1200w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1200" height="800" loading="lazy" decoding="async" alt="A candlelit table set with wine glasses and plates in a moody dining room.">
+            <span class="gallery__caption"><span class="gallery__index">01</span> The dining room, before the first sitting</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-bar-1000.webp" data-full-srcset="assets/img/gallery-bar-700.webp 700w, assets/img/gallery-bar-1000.webp 1000w" data-caption="The bar at golden hour" aria-label="Enlarge image: The bar at golden hour">
+            <img src="assets/img/gallery-bar-1000.webp" srcset="assets/img/gallery-bar-700.webp 700w, assets/img/gallery-bar-1000.webp 1000w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1000" height="1250" loading="lazy" decoding="async" alt="A low-lit bar with pendant lights, brass details and rows of bottles.">
+            <span class="gallery__caption"><span class="gallery__index">02</span> The bar at golden hour</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-cocktail-1000.webp" data-full-srcset="assets/img/gallery-cocktail-700.webp 700w, assets/img/gallery-cocktail-1000.webp 1000w" data-caption="Smoked Old Fashioned" aria-label="Enlarge image: Smoked Old Fashioned">
+            <img src="assets/img/gallery-cocktail-1000.webp" srcset="assets/img/gallery-cocktail-700.webp 700w, assets/img/gallery-cocktail-1000.webp 1000w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1000" height="1250" loading="lazy" decoding="async" alt="A smoked Old Fashioned cocktail with an orange twist on a brass bar top.">
+            <span class="gallery__caption"><span class="gallery__index">03</span> Smoked Old Fashioned</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-spice-1200.webp" data-full-srcset="assets/img/gallery-spice-800.webp 800w, assets/img/gallery-spice-1200.webp 1200w" data-caption="The spice route" aria-label="Enlarge image: The spice route">
+            <img src="assets/img/gallery-spice-1200.webp" srcset="assets/img/gallery-spice-800.webp 800w, assets/img/gallery-spice-1200.webp 1200w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1200" height="800" loading="lazy" decoding="async" alt="Bowls of colourful whole spices — chillies, turmeric and cardamom — at a market stall.">
+            <span class="gallery__caption"><span class="gallery__index">04</span> The spice route</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-woman-1000.webp" data-full-srcset="assets/img/gallery-woman-700.webp 700w, assets/img/gallery-woman-1000.webp 1000w" data-caption="The room at eight" aria-label="Enlarge image: The room at eight">
+            <img src="assets/img/gallery-woman-1000.webp" srcset="assets/img/gallery-woman-700.webp 700w, assets/img/gallery-woman-1000.webp 1000w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1000" height="1250" loading="lazy" decoding="async" alt="A guest laughing over dinner in a warm, busy dining room.">
+            <span class="gallery__caption"><span class="gallery__index">05</span> The room at eight</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-warm-1200.webp" data-full-srcset="assets/img/gallery-warm-800.webp 800w, assets/img/gallery-warm-1200.webp 1200w" data-caption="The long table" aria-label="Enlarge image: The long table">
+            <img src="assets/img/gallery-warm-1200.webp" srcset="assets/img/gallery-warm-800.webp 800w, assets/img/gallery-warm-1200.webp 1200w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1200" height="800" loading="lazy" decoding="async" alt="A warm dining room with wooden tables, rust-coloured chairs and soft pendant lighting.">
+            <span class="gallery__caption"><span class="gallery__index">06</span> The long table</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-grill-1000.webp" data-full-srcset="assets/img/gallery-grill-700.webp 700w, assets/img/gallery-grill-1000.webp 1000w" data-caption="From the pass" aria-label="Enlarge image: From the pass">
+            <img src="assets/img/gallery-grill-1000.webp" srcset="assets/img/gallery-grill-700.webp 700w, assets/img/gallery-grill-1000.webp 1000w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1000" height="1000" loading="lazy" decoding="async" alt="A mixed grill platter with skewers, flatbreads, dips and charred vegetables.">
+            <span class="gallery__caption"><span class="gallery__index">07</span> From the pass</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+
+          <button class="gallery__item reveal" type="button" data-gallery data-full="assets/img/gallery-chef-1000.webp" data-full-srcset="assets/img/gallery-chef-700.webp 700w, assets/img/gallery-chef-1000.webp 1000w" data-caption="Before service" aria-label="Enlarge image: Before service">
+            <img src="assets/img/gallery-chef-1000.webp" srcset="assets/img/gallery-chef-700.webp 700w, assets/img/gallery-chef-1000.webp 1000w" sizes="(min-width: 1000px) 32vw, (min-width: 700px) 46vw, 46vw" width="1000" height="1250" loading="lazy" decoding="async" alt="A chef finely slicing green chillies and mushrooms before service.">
+            <span class="gallery__caption"><span class="gallery__index">08</span> Before service</span>
+            <span class="gallery__expand" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="#icon-arrow"></use></svg></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="experience__bg" aria-hidden="true">
+        <img src="assets/img/experience-1800.webp" srcset="assets/img/experience-1200.webp 1200w, assets/img/experience-1800.webp 1800w" sizes="100vw" width="1800" height="1012" loading="lazy" decoding="async" alt="" data-parallax="0.08">
+      </div>
+      <div class="experience__shade" aria-hidden="true"></div>
+
+      <div class="container experience__inner">
+        <div class="experience__head">
+          <p class="label label--light reveal"><span class="label__num">05</span> The experience</p>
+          <h2 class="experience__title reveal" id="experience-title" style="--delay: 60ms">An evening, <em>paced by the fire.</em></h2>
+          <p class="experience__lede reveal" style="--delay: 120ms">Dinner at Ember &amp; Spice is a sequence, not a menu. It begins with something cold and sharp, moves through smoke and heat, and ends with something sweet and burnt. The pace is deliberate. The room is small. The fire decides.</p>
+          <button class="btn btn--ghost btn--light reveal" type="button" data-open-reserve style="--delay: 180ms">Reserve the chef’s counter <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+        </div>
+
+        <div class="experience__moments">
+          <div class="moment reveal">
+            <span class="moment__num">01</span>
+            <h3>First light</h3>
+            <p>Aperitif at the bar. Chilled oysters, kokum, pink pepper — something cold before the heat.</p>
+          </div>
+          <div class="moment reveal" style="--delay: 80ms">
+            <span class="moment__num">02</span>
+            <h3>The hearth</h3>
+            <p>Eight seats at the counter, front row to the fire and the pass. Ask the chef what just came off.</p>
+          </div>
+          <div class="moment reveal" style="--delay: 160ms">
+            <span class="moment__num">03</span>
+            <h3>Afterglow</h3>
+            <p>Burnt honey, aged rum, and the last of the evening. The room stays open until the fire goes out.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__copy">
+          <p class="label reveal"><span class="label__num">06</span> Find us</p>
+          <h2 class="contact__title reveal" id="contact-title" style="--delay: 60ms">Come for the fire. <em>Stay for the last train.</em></h2>
+          <p class="contact__lede reveal" style="--delay: 120ms">Tucked off a Shoreditch side street, behind a dark green door and a curtain of smoke. Walk-ins are welcome at the bar; the dining room is best booked ahead.</p>
+
+          <div class="contact__details reveal" style="--delay: 160ms">
+            <div class="contact__block">
+              <h3>Visit</h3>
+              <address>14 Kestrel Lane<br>Shoreditch<br>London E2 7DP</address>
+              <span class="demo-note">Demo address</span>
+            </div>
+            <div class="contact__block">
+              <h3>Hours</h3>
+              <dl class="hours">
+                <div><dt>Tue–Thu</dt><dd>17:30–23:00</dd></div>
+                <div><dt>Fri–Sat</dt><dd>17:30–00:00</dd></div>
+                <div><dt>Sunday</dt><dd>12:00–20:00</dd></div>
+                <div><dt>Monday</dt><dd>Closed</dd></div>
+              </dl>
+              <span class="demo-note">Last orders 30 minutes before close</span>
+            </div>
+            <div class="contact__block">
+              <h3>Enquiries</h3>
+              <a href="tel:+442000000000">+44 (0)20 0000 0000</a>
+              <a href="mailto:hello@emberandspice.example">hello@emberandspice.example</a>
+              <span class="demo-note">Placeholder phone &amp; email</span>
+            </div>
+          </div>
+
+          <div class="contact__actions reveal" style="--delay: 200ms">
+            <button class="btn btn--solid" type="button" data-open-reserve>Reserve a table <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+            <a class="btn btn--whatsapp" href="https://wa.me/447000000000?text=Hello%20Ember%20%26%20Spice%2C%20I%27d%20like%20to%20enquire%20about%20a%20table." target="_blank" rel="noopener" aria-label="WhatsApp enquiry — demo number">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+              WhatsApp
+            </a>
+          </div>
+          <p class="contact__demo reveal">Concept demo — the address, phone, email and WhatsApp number are placeholders. The WhatsApp link opens a demo number; it does not confirm a booking.</p>
+        </div>
+
+        <div class="contact__visual reveal" style="--delay: 120ms">
+          <figure class="contact__figure">
+            <img src="assets/img/contact-900.webp" srcset="assets/img/contact-600.webp 600w, assets/img/contact-900.webp 900w" sizes="(min-width: 900px) 40vw, 90vw" width="900" height="1125" loading="lazy" decoding="async" alt="The warm, low-lit dining room at Ember & Spice with wooden tables and rust-coloured chairs.">
+            <figcaption>The room, just before service</figcaption>
+          </figure>
+          <div class="contact__plaque">
+            <span class="contact__plaque-label">Find the door</span>
+            <p>14 Kestrel Lane<br>Shoreditch, London</p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Shoreditch+London" target="_blank" rel="noopener">Open in Maps <span>(demo)</span> <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="footer__brand" href="#home" aria-label="Ember and Spice — back to top">
+          <svg class="footer__mark" aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-flame"></use></svg>
+          <span>Ember <em>&amp;</em> Spice</span>
+        </a>
+        <p class="footer__tagline">A modern Indian kitchen built around one open hearth.</p>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h3>Explore</h3>
+          <nav aria-label="Footer">
+            <a href="#story">Our story</a>
+            <a href="#dishes">Signature dishes</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <h3>Visit</h3>
+          <address>14 Kestrel Lane<br>Shoreditch<br>London E2 7DP</address>
+          <a class="footer__map" href="https://www.google.com/maps/search/?api=1&amp;query=Shoreditch+London" target="_blank" rel="noopener">Open in Maps <span>(demo)</span></a>
+        </div>
+        <div class="footer__col">
+          <h3>Hours</h3>
+          <dl class="hours hours--footer">
+            <div><dt>Tue–Thu</dt><dd>17:30–23:00</dd></div>
+            <div><dt>Fri–Sat</dt><dd>17:30–00:00</dd></div>
+            <div><dt>Sunday</dt><dd>12:00–20:00</dd></div>
+            <div><dt>Monday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+        <div class="footer__col">
+          <h3>Connect</h3>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram — demo link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-instagram"></use></svg> Instagram</a>
+            <a href="https://wa.me/447000000000" target="_blank" rel="noopener" aria-label="WhatsApp — demo number"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg> WhatsApp</a>
+            <a href="mailto:hello@emberandspice.example"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-mail"></use></svg> Email</a>
+            <a href="tel:+442000000000"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-phone"></use></svg> Call</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Ember &amp; Spice. All rights reserved.</p>
+        <p class="footer__demo"><strong>Concept demo</strong> — a fictional restaurant. Business details, menu and prices are illustrative. Photography via Unsplash. Type: Instrument Serif &amp; Manrope.</p>
+        <a class="footer__top-link" href="#home">Back to top <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-up"></use></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ RESERVATION NOTICE ============ -->
+  <dialog class="modal" id="reserve-dialog" aria-labelledby="reserve-title">
+    <div class="modal__panel">
+      <button class="modal__close" type="button" data-close-reserve aria-label="Close reservation panel"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+      <p class="label"><span class="label__num">Demo</span> Reservations</p>
+      <h2 class="modal__title" id="reserve-title">This is a <em>design concept.</em></h2>
+      <p class="modal__lede">No reservation has been made and nothing has been sent. The reserve button demonstrates the interaction only — there is no booking engine, payment or confirmation behind it.</p>
+
+      <div class="modal__note">
+        <strong>For a real launch</strong>
+        <p>This panel would connect to the restaurant’s booking provider — SevenRooms, OpenTable or a simple email enquiry — with live availability and a confirmation email.</p>
+      </div>
+
+      <div class="modal__details">
+        <div>
+          <span>Call the restaurant</span>
+          <a href="tel:+442000000000">+44 (0)20 0000 0000</a>
+          <small>Placeholder number</small>
+        </div>
+        <div>
+          <span>WhatsApp</span>
+          <a href="https://wa.me/447000000000?text=Hello%20Ember%20%26%20Spice%2C%20I%27d%20like%20to%20enquire%20about%20a%20table." target="_blank" rel="noopener">Start an enquiry</a>
+          <small>Demo number</small>
+        </div>
+      </div>
+
+      <div class="modal__actions">
+        <a class="btn btn--solid" href="tel:+442000000000">Call the restaurant <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-phone"></use></svg></a>
+        <button class="btn btn--ghost" type="button" data-close-reserve>Back to the site</button>
+      </div>
+      <p class="modal__fine">Demo content. Replace the phone, WhatsApp and booking details before launch.</p>
+    </div>
+  </dialog>
+
+  <!-- ============ GALLERY LIGHTBOX ============ -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <div class="lightbox__bar">
+      <span class="lightbox__count" aria-live="polite">01 / 08</span>
+      <button class="lightbox__close" type="button" data-close-lightbox aria-label="Close image viewer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+    </div>
+    <figure class="lightbox__figure">
+      <img id="lightbox-img" src="assets/img/gallery-room-1200.webp" alt="" width="1200" height="800">
+      <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Previous image"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-prev"></use></svg></button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Next image"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-next"></use></svg></button>
+  </dialog>
+
+  <!-- ============ MOBILE NAVIGATION ============ -->
+  <dialog class="mobile-nav" id="mobile-nav" aria-label="Site menu">
+    <div class="mobile-nav__top">
+      <a class="brand brand--mobile" href="#home" data-close-nav aria-label="Ember and Spice — home">
+        <svg class="brand__mark" aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-flame"></use></svg>
+        <span class="brand__text"><span class="brand__name">Ember <em>&amp;</em> Spice</span><span class="brand__place">London · Est. 2019</span></span>
+      </a>
+      <button class="mobile-nav__close" type="button" data-close-nav aria-label="Close site menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-close"></use></svg></button>
+    </div>
+
+    <nav class="mobile-nav__links" aria-label="Mobile primary">
+      <a href="#story" data-close-nav><span>01</span> Story</a>
+      <a href="#dishes" data-close-nav><span>02</span> Dishes</a>
+      <a href="#menu" data-close-nav><span>03</span> Menu</a>
+      <a href="#gallery" data-close-nav><span>04</span> Gallery</a>
+      <a href="#experience" data-close-nav><span>05</span> Experience</a>
+      <a href="#contact" data-close-nav><span>06</span> Contact</a>
+    </nav>
+
+    <div class="mobile-nav__foot">
+      <p>14 Kestrel Lane, Shoreditch<br>Tue–Sun · from 17:30</p>
+      <button class="btn btn--solid" type="button" data-open-reserve>Reserve a table <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+      <span class="mobile-nav__demo">Concept demo · fictional business details</span>
+    </div>
+  </dialog>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="assets/js/embers.js"></script>
+</body>
+</html>
